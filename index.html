@@ -1,486 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Swapnil More : Research Engineer</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-  }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 5px;
-  }
-  h3 {
-      font-size: 22px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 500;
-      margin-bottom: 5px;
-  }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 5px;
-  }
-  p {
-      font-size: 17px;
-      line-height: 1.375em;
-      font-weight: 400;
-      margin-bottom: 5px;
-  }
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid #f4511e;
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
-      background-color: #fff !important;
-      color: #f4511e;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #f4511e !important;
-      padding: 1px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #f4511e;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Swapnil More</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="glyphicon glyphicon-option-horizontal"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#education">EDUCATION</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#publications">PUBLICATIONS</a></li>
-        <li><a href="#nanofab">NanoFAB</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="jumbotron text-center">
-  <h1>Swapnil More</h1>
-  <p>Research Engineer</p>
-  <p> I am a PhD student at Indian Institute of Science, Bangalore. I have been working on nonlinear dynamics of Nano Electromechanical Systems (NEMS) for last 5 years. During this period have have designed and implemented various experiments on NEMS.
-I have also developed keen interest in computer science during my spare time. I am a self-taught programmer in Python, JavaScript, HTML, C++. I have used these programming skills primarily in instrument control and data analysis of my experiments on NEMS.
-I am Machine Learning engineer in making. I am fascinated with the recent developments in the field of ML. I hoping to be the part of this technological revolution. </p><br>
-  <br>
-  <p><strong><a href="https://linkedin.com/in/swapnilkmore">LinkedIn</a></strong></p>
-  <p><strong><a href="https://airyzoka.github.io">AiryZoka Web App</a></strong></p>
-</div>
-
-<!-- Container (Education Section) -->
-<div id="education" class="container-fluid text-center">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-education logo"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>EDUCATION</h2><br>
-      <h4><strong>Indian Institue of Science, Bangalore (2014-2016)</strong> <br>
-      Master of Technology (Nanotechnology)</h4>
-      <h4><strong>University of Pune (2009-2012)</strong> <br>
-      Bachelor of Engineering (Mechanical Engineering)</h4>
-    </div>
-
-  </div>
-</div>
-
-<!-- Container (experience Section) -->
-<div id="experience" class="container-fluid text-center bg-grey">
-  <div class="row">
-
-    <div class="col-sm-8">
-      <h2>EXPERIENCE</h2><br>
-      <div align = "left">
-        <h3><strong>Research Scholar (Since 2015)</strong></h3>
-        <h4>Nonlinear Dynamics of Nanoelectromechanical Systems</h4>
-        <p>Work responsibilities</p>
-        <ul>
-          <li>Design and implement nano-fabrication process for nano electromechanical systems
-(NEMS).</li>
-          <li>Fabricate and test NEMS.</li>
-          <li>Setup instrumentation to actuate and detect resonance in NEMS.</li>
-          <li>Modeling nonlinear behavior of NEMS by analyzing experimental data.</li>
-          <li>Writing application software for instrument control, data acquisition and data analysis
-(Python, JavaScript, Matlab).</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-briefcase logo"></span>
-    </div>
-  </div>
-</div>
-
-<!-- Container (projects Section) -->
-<div id="projects" class="container-fluid text-center">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo"></span>
-    </div>
-    <div class="col-sm-8" >
-      <h2>PROJECTS</h2><br>
-      <div align = "left">
-        <h3><strong>Computer Science</strong></h3>
-        <h4><strong>Web app for Scientific Experiments</strong></h4>
-        <p>The web app allowed control the instrumentation for actuation and detection of resonance in
-  NEMS. It also allowed access to data generated from the experiments over the server. The three pillars of the web app are:</p>
-        <ul>
-          <li> <a href="https://github.com/swapnil2me/PyInstr">Python library</a> for instrument control using PyVisa and VXI11</li>
-          <li> <a href="https://github.com/swapnil2me/Remote_PyInstr">Flask server</a> for remote control of scientific experiments</li>
-          <li> <a href="https://github.com/swapnil2me/Dashboard_PyInstr">Dashboard</a> to monitor the experiment results</li>
-        </ul>
-        <h4><strong>Modelling Nonlinear Dynamics of NEMS with tunable nonlinearities</strong></h4>
-        <p>Developed a numerical integration scheme to solve for the temporal response of the nonlinear dynamical system. The temporal solution was utilized to generate the frequency domain response of the system. The simulations allowed evaluating the behavior of a highly nonlinear system in multi-parameter space.</p>
-        <h4><strong>Microscope Automation</strong></h4>
-        <p>The computer control of microscope stage and camera allowed controlled scanning of
-Graphene exfoliation on Si/SiO2 substrates. The image processing powered by Matlab
-toolbox allowed detection of monolayer Graphene based on contrast detection.</p>
-        <h3><strong>Nanotechnology</strong></h3>
-        <h4><strong>2D NEMS</strong></h4>
-        <p>Fabrication of NEMS on thin 50um thin Si/SiO2 diaphragm.</p>
-        <p>Fabrication of NEMS on flexible PET substrate.</p>
-        <p>Design of PCB with vacuum cavity for actuation and detection of 2D NEMS fabricated on
-thin Silicon Diaphragm which can be deformed by applying air pressure for strain tuning of
-the NEMS.</p>
-        <h4><strong>Strain Engineering</strong></h4>
-        <p>Study of electronic properties and gas sensing behavior of mono, bi, tri layer MoS2 under
-application of uniaxial strain.</p>
-        <h4><strong>Nanofabrication</strong></h4>
-        <p>Preparation of detailed fabrication run-sheet for vertically aligned micro channels in silicon
-wafer.</p>
-        <h3><strong>Mechanical Engineering</strong></h3>
-        <p>Development of TE mode cell for measurement of electromagnetic emissions and testing
-radiation immunity of integrated circuits.</p>
-        <p>Design of six speed reduction gearbox for tool room lathe of 406 x 762 mm capacity.</p>
-        <p>Design of single plate clutch for automotive application.</p>
-        <p>Pneumatic automation using programmable logic controller (PLC).</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Container (publications Section) -->
-<div id="publications" class="container-fluid text-center bg-grey">
-  <div class="col-sm-8">
-    <h2>PUBLICATIONS</h2><br>
-    <h4 align="left">More S., Naik A. (2019) Fabrication of 2D NEMS on Flexible Substrates for Strain
-Engineering in Sensing Applications. In: Sharma R., Rawal D. (eds) The Physics of
-Semiconductor Devices. IWPSD 2017. Springer Proceedings in Physics, vol 215. Springer,
-Cham</h4><br>
-    <h4 align="left">More S., Naik A. Modelling Internal Resonance in 2D NEMS, International Conference on
-Nonlinear Solid Mechanics (ICoNSOM), Rome, Italy (June 16-19, 2019)</h4><br>
-    <h4 align="left">More S., Naik A. Manipulating Internal Resonance and Coupled Modes in NEMS, NMC
-2019 (The 16th International Workshop on Nanomechanical Systems, Lausanne June 19-21,
-2019)</h4><br>
-  </div>
-  <div class="col-sm-4">
-    <span class="glyphicon glyphicon-print logo"></span>
-  </div>
-
-</div>
-
-<!-- Container (nanofab skills Section) -->
-<div id="nanofab" class="container-fluid text-center">
-  <div class="row">
-    <div class="col-sm-4">
-      <a href="http://www.cense.iisc.ac.in/content/infrastructure"><span class="glyphicon logo"><img src="N_t.png"></span>
-      <p align = 'center' style="color:#f4511e;">CeNSE</p></a>
-    </div>
-    <div class="col-sm-8" >
-      <h2>NanoFAB SKILLS</h2><br>
-      <div align = "left">
-        <h3><strong>Lithography</strong></h3>
-        <p>E-beam Lithography (Raith)</p>
-        <p>Photolithography (EVG-620, MJB4)</p>
-        <h3><strong>Dry Etch Tools</strong></h3>
-        <p>DRIE (SPTS LPX Pegasus)</p>
-        <p>RIE (Oxford Instruments)</p>
-        <h3><strong>Wet Processing</strong></h3>
-        <p>Wetbench for prosses with Acids, Bases, Solvents</p>
-        <h3><strong>Nano Deposition</strong></h3>
-        <p>E-beam Evaporator (Techport)</p>
-        <p>Thermal Evaporator</p>
-        <p>PECVD</p>
-        <h3><strong>Nano Characterization</strong></h3>
-        <p>SEM (Zeiss)</p>
-        <p>FIB (FEI)</p>
-        <p>AFM (Bruker)</p>
-        <p>Raman Spectroscopy (LabRAM HR)</p>
-        <h3><strong>Cleanroom</strong></h3>
-        <p>Class-100</p>
-        <p>Trained for minimizing cross contamination</p>
-        <p>Trained for standard safety protocols</p>
-        <p>5 years of experience.</p>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Container (skills Section) -->
-<div id="skills" class="container-fluid">
-  <h2 class="text-center">SKILLS</h2>
-  <div>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-console logo-small"></span>
-        <h4>Programming Languages</h4>
-        <p>Python: SciPy, TensorFlow, scikit-learn, Pandas, OpenCV,</p>
-        <p>JavaScript, HTML, C++</p>
-        <p>Matlab, Mathematica, LabView</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-sort-by-order-alt logo-small"></span>
-        <h4>Computational Capabilities</h4>
-        <p>Machine Learning, Optimization, Data Visualization</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-scissors logo-small"></span>
-        <h4>Design Tools</h4>
-        <p>CATIA, Blender, AutoCAD, Gimp</p>
-      </div>
-    </div>
-    <br><br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-ok logo-small"></span>
-        <h4>FEA Solvers</h4>
-        <p>COMSOL, ANSYS</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-tasks logo-small"></span>
-        <h4>Pruductivity</h4>
-        <p>MS Office, OriginPro, LaTeX</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-cd logo-small"></span>
-        <h4 style="color:#303030;">OS</h4>
-        <p>Ubuntu, Windows</p>
-      </div>
-    </div>
-  </div>
-
-  <br><br>
-  <br><br>
-</div>
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
-</footer>
-
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 500, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-
-  // Slide in elements on scroll
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
-
-  // Collapse nav side-button
-  $('.navbar-nav>li>a').on('click', function(){
-      $('.navbar-collapse').collapse('hide');
-  });
-})
-</script>
-
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#">Swapnil More</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects-no-images.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page lanidng-page">
+        <section class="portfolio-block block-intro">
+            <div class="container">
+                <div class="avatar" style="background: url(&quot;assets/img/avatars/InLab.jpg&quot;) center / cover;"></div>
+                <div class="about-me">
+                    <p>&nbsp;I am a PhD student at Indian Institute of Science, Bangalore. I have been working on nonlinear dynamics of Nano Electromechanical Systems (NEMS) for last 5 years. During this period have have designed and implemented various experiments on NEMS. I have also developed keen interest in computer science during my spare time. I am a self-taught programmer in Python, JavaScript and C++. I have used these programming skills primarily in instrument control and data analysis of my experiments on NEMS. I am Machine Learning engineer in making. I am fascinated with the recent developments in the field of ML. I hoping to be the part of this technological revolution.&nbsp;</p><a class="btn btn-outline-primary" role="button" href="cv.html">CV</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block skills">
+            <div class="container">
+                <div class="heading">
+                    <h2>Special Skills</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-erlenmeyer-flask-bubbles"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Nanotechnology</h3>
+                                <p class="card-text">I fabricate nano electromechanical systems (<a href="http://www.cense.iisc.ac.in/anaik/research/">NEMS</a>) using class 100 clean room at&nbsp;<a href="http://nnfc.cense.iisc.ac.in/">NNFC</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-android-laptop"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Data Science</h3>
+                                <p class="card-text">Data science plays crucial role in extracting useful information form the&nbsp;&nbsp;<a href="http://www.cense.iisc.ac.in/anaik/">scientific experiments</a>&nbsp; on NEMS. Hypothesis testing and model fitting is a day to day activity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-code-working"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Full stack developer</h3>
+                                <p class="card-text">I design and control experiments on NEMS over the internet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="links"><a href="#">About me</a><a href="projects-no-images.html">Projects</a><a href="cv.html">CV</a></div>
+            <div class="social-icons"><a href="https://github.com/swapnil2me"><i class="icon ion-social-github"></i></a><a href="https://linkedin.com/in/swapnilkmore"><i class="icon ion-social-linkedin"></i></a><a href="https://twitter.com/pawlinS_roMe"><i class="icon ion-social-twitter"></i></a></div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
+
 </html>
