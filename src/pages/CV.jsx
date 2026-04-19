@@ -3,44 +3,55 @@ import { FaDownload } from 'react-icons/fa';
 const CV = () => {
   const experiences = [
     {
-      title: "Computational Lithography",
-      org: "GlobalFoundries, Bangalore",
-      period: "08/2022 - Present",
-      desc: "Implementing resolution enhancement techniques for semiconductor fabrication. Edge fragmentation for width adjustments and SRAF placement using rule-based and model-based optimization techniques. Calibrating optical and resist models for print image simulations. Shell scripting, automating the testing process using python."
+      title: "Process Integration Engineer (Virtual Fabrication)",
+      org: "Lam Research India",
+      period: "July 2025 - Present",
+      desc: "Advanced Packaging & TSV Integration. Optimized the process window for HBM including TSV, BEOL, μBump, and die stacking. Identified the safe range of lateral etch ratio and Si:SiGe selectivity to avoid buckling of the silicon nanosheet channel in GAA FETs using SEMulator3D® and JMP."
     },
     {
-      title: "Research Scholar",
-      org: "CeNSE",
-      period: "08/2015 - 08/2022",
-      desc: "Project: Nonlinear dynamics and strain engineering of 2D nanoelectromechanical systems (NEMS). Design and implement nano-fabrication processes for NEMS. Setup experimental apparatus to actuate and detect resonance in NEMS using Signal Generators, Lock-In amplifiers, Spectrum Analyzers; design experiments for specific testing; designing PCB and RF circuits."
+      title: "Process Integration Engineer (Postdoc)",
+      org: "IMEC, Belgium",
+      period: "Aug 2023 - June 2025",
+      desc: "Demonstrated wafer-level integration of silicon membrane-based microfluidic valves. Developed deep silicon etch and shallow SiN/SiO2 etch recipes. Analyzed inline metrology data (SAM, AFM, CD-SEM, FIB + Tilted SEM) to assess process variability and conducted root cause analysis."
+    },
+    {
+      title: "Computational Lithography (Intern)",
+      org: "Global Foundries, Bengaluru",
+      period: "Aug 2022 - Jan 2023",
+      desc: "Conducted Fourier optics simulations using Python to analyze diffraction limits, optimizing optical, resist, and etch models. Automated full-chip layout data processing with EDA tools and reviewed CMOS design rule checks for simulated print images."
+    },
+    {
+      title: "PhD Researcher",
+      org: "IISc, Bengaluru",
+      period: "Aug 2016 - July 2023",
+      desc: "Developed a resonant pressure sensor with a responsivity of 20 kHz/kPa. Designed an integration scheme for coupling NEMS with MEMS. Processed experimental data using Python and MATLAB and developed an automated instrument control dashboard."
     },
     {
       title: "Project Assistant",
-      org: "IIT, Bombay",
-      period: "02/2013 - 12/2013",
-      desc: "Study and design of heating, ventilation and air conditioning system."
+      org: "IIT Mumbai",
+      period: "Feb 2013 - Dec 2013",
+      desc: "Study and design of heating, ventilation, and air conditioning systems."
     },
     {
       title: "Graduate Engineer Trainee",
-      org: "Mahindra Navistar Automotives Ltd.",
-      period: "08/2012 - 01/2013",
-      desc: "Sales and dealer development: Conducting market surveys to understand customer requirements in the LCV segment."
+      org: "Mahindra & Mahindra",
+      period: "Aug 2012 - Jan 2013",
+      desc: "Sales and dealer development."
     }
   ];
 
   const education = [
-    { degree: "Ph.D. (Nanoelectromechanical Systems)", org: "Indian Institute of Science, Bangalore", period: "Aug 2022", score: "7/10" },
-    { degree: "MTech (Nanotechnology)", org: "Indian Institute of Science, Bangalore", period: "08/2014 - 07/2016", score: "6.4/8" },
-    { degree: "BE (Mechanical Engineering)", org: "University of Pune", period: "08/2009 - 07/2012", score: "69%" },
-    { degree: "Diploma (Mechanical Engineering)", org: "Government Polytechnic, Pune", period: "08/2006 - 07/2009", score: "86%" },
-    { degree: "Machine Learning (MOOC)", org: "Stanford Online", period: "Nov 2019", score: "Certificate Available" }
+    { degree: "Doctor of Philosophy", org: "IISc, Bengaluru", period: "2023", score: "7/10" },
+    { degree: "MTech (Nanotechnology)", org: "IISc, Bengaluru", period: "2016", score: "6.4/8" },
+    { degree: "BE (Mechanical Eng.)", org: "University of Pune", period: "2012", score: "69%" },
+    { degree: "Diploma (Mechanical Eng.)", org: "Govt. Polytechnic, Pune", period: "2009", score: "86%" }
   ];
 
   const skills = [
-    { category: "Nanofabrication", items: [{name: "Lithography", val: 100}, {name: "Dry/Wet Etching", val: 98}, {name: "Thin-film deposition", val: 90}] },
-    { category: "Data Science", items: [{name: "Hypothesis testing", val: 95}, {name: "Model fitting", val: 90}, {name: "Machine Learning", val: 80}] },
-    { category: "Programming", items: [{name: "Python", val: 95}, {name: "Matlab", val: 95}, {name: "JavaScript", val: 80}] },
-    { category: "Web Development", items: [{name: "HTML, CSS", val: 90}, {name: "D3js", val: 90}, {name: "React, Django", val: 80}] }
+    { category: "EDA & Design Tools", items: [{name: "SEMulator3D®", val: 95}, {name: "Siemens Calibre", val: 90}, {name: "COMSOL", val: 85}, {name: "Cadence", val: 80}] },
+    { category: "Data Science", items: [{name: "JMP", val: 95}, {name: "Machine Learning", val: 85}, {name: "DoE Frameworks", val: 90}] },
+    { category: "Programming", items: [{name: "Python", val: 95}, {name: "MATLAB", val: 90}, {name: "LabView", val: 85}, {name: "JavaScript", val: 80}] },
+    { category: "Nanofabrication", items: [{name: "Lithography", val: 95}, {name: "Dry/Wet Etching", val: 95}, {name: "Thin-film deposition", val: 90}] }
   ];
 
   return (
@@ -48,7 +59,7 @@ const CV = () => {
       
       <div className="cv-header">
         <h1 className="cv-title text-gradient">Curriculum Vitae</h1>
-        <a href="/SwapnilMore.pdf" className="btn-primary resume-dl" target="_blank" rel="noreferrer">
+        <a href="/Swapnil_AP_20260315.pdf" className="btn-primary resume-dl" target="_blank" rel="noreferrer">
           <FaDownload /> Download PDF
         </a>
       </div>

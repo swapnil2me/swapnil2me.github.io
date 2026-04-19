@@ -3,6 +3,12 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 const Projects = () => {
   const projects = [
     {
+      title: "Graphene resonant pressure sensor",
+      desc: "Graphene resonant pressure sensor with ultrahigh responsivity-range product (JMM 2024).",
+      color: "#3b82f6",
+      type: "publication"
+    },
+    {
       title: "Strain engineering of 2D NEMS",
       desc: "Demonstration of a clean method to tune strain on Graphene NEMS",
       link: "https://iopscience.iop.org/article/10.1088/1361-6439/abe20b",

@@ -4,27 +4,27 @@ import { FaFlask, FaCogs, FaLaptopCode, FaCode } from 'react-icons/fa';
 const Home = () => {
   const skills = [
     {
-      title: "Nanotechnology",
-      desc: "I fabricate nanoelectromechanical systems (NEMS) using class 100 cleanroom at NNFC.",
-      icon: <FaFlask />,
-      link: "http://www.cense.iisc.ac.in/anaik/research/"
-    },
-    {
-      title: "Machine Design",
-      desc: "I design machines that behave!",
+      title: "Process Integration",
+      desc: "I optimize process windows for advanced semiconductor fabrication including HBM, TSV, and GAA FET technologies.",
       icon: <FaCogs />,
       link: "#"
     },
     {
-      title: "Data Science",
-      desc: "Data science plays a crucial role in extracting useful information from scientific experiments on NEMS. Hypothesis testing and model fitting is a day-to-day activity.",
+      title: "EDA & Simulation",
+      desc: "I utilize powerful EDA tools like SEMulator3D and Siemens Calibre for computational lithography, OPC, and defect modeling.",
       icon: <FaLaptopCode />,
-      link: "http://www.cense.iisc.ac.in/anaik/"
+      link: "#"
     },
     {
-      title: "Full-stack developer",
-      desc: "I design and control experiments on NEMS over the internet.",
+      title: "Data Science",
+      desc: "I employ DoE frameworks and machine learning with JMP and Python to analyze inline metrology data and assess process variability.",
       icon: <FaCode />,
+      link: "#"
+    },
+    {
+      title: "NEMS & Nanofabrication",
+      desc: "I have extensive experience in fabricating nanoelectromechanical systems and developing complex deep silicon etch processes.",
+      icon: <FaFlask />,
       link: "#"
     }
   ];
@@ -39,16 +39,16 @@ const Home = () => {
           </div>
           <div className="about-me">
             <h1 className="greeting">Hi, I'm <span className="text-gradient">Swapnil More</span></h1>
-            <h2 className="subtitle">Ph.D. student at IISc, Bangalore</h2>
+            <h2 className="subtitle">Process Integration Engineer at Lam Research India</h2>
             <div className="bio">
               <p>
-                I have been working on nonlinear dynamics of Nano Electromechanical Systems (NEMS) for the last six years. My research work mainly focuses on developing nanoelectromechanical sensors with strain tunability, where I have studied the effect of strain on linear and nonlinear dynamics, mode coupling, dynamic range, limit of detection, and quality factor of resonant sensors.
+                As a Process Integration Engineer, I have extensive experience driving process flow optimizations, defect reduction, and computational modeling across both industrial fabrication and advanced R&D environments. My expertise lies in utilizing powerful EDA and data science tools to solve critical yield and defect challenges in advanced semiconductor architectures.
               </p>
               <p>
-                I have extensive experience in fabricating 2D material-based devices in a class 100 cleanroom, using various tools such as e-beam, photolithography, and wet/dry etching techniques. In addition, I have expertise in characterizing fabricated devices using SEM, AFM, and RF electrical characterization techniques.
+                Previously, as a Postdoctoral Researcher at IMEC, Belgium, I demonstrated wafer-level integration of silicon membrane-based microfluidic valves, developed complex deep silicon etch processes, and performed rigorous inline metrology.
               </p>
               <p>
-                Beyond nanotechnology, I have developed a keen interest in computer science. I am a self-taught programmer in Python, JavaScript, and C++. I use these skills primarily in instrument control and data analysis of my experiments on NEMS.
+                I hold a Ph.D. from IISc Bengaluru, where I worked extensively on NEMS/MEMS sensor development. Beyond nanofabrication, I am a self-taught programmer in Python, JavaScript, and C++, building automated data pipelines that significantly accelerate processing times.
               </p>
             </div>
             <div className="hero-actions">
