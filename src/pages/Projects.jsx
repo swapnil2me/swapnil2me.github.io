@@ -1,70 +1,48 @@
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { useSearchParams, Link } from 'react-router-dom';
+import { projectsData } from '../data/projectsData';
+import { skillsData } from '../data/skillsData';
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Graphene resonant pressure sensor",
-      desc: "Graphene resonant pressure sensor with ultrahigh responsivity-range product (JMM 2024).",
-      color: "#3b82f6",
-      type: "publication"
-    },
-    {
-      title: "Strain engineering of 2D NEMS",
-      desc: "Demonstration of a clean method to tune strain on Graphene NEMS",
-      link: "https://iopscience.iop.org/article/10.1088/1361-6439/abe20b",
-      color: "var(--accent-cyan)",
-      type: "publication"
-    },
-    {
-      title: "2D NEMS on flexible substrates",
-      desc: "Fabrication method for realizing 2D NEMS on flexible substrates.",
-      link: "https://link.springer.com/chapter/10.1007/978-3-319-97604-4_8",
-      color: "#f59e0b",
-      type: "publication"
-    },
-    {
-      title: "Nonlinear dynamics of NEMS",
-      desc: "Leveraging nonlinear behavior of NEMS for ultrasensitive charge detection.",
-      link: "https://aip.scitation.org/doi/10.1063/5.0031890",
-      color: "var(--accent-purple)",
-      type: "publication"
-    },
-    {
-      title: "Instrument control dashboard",
-      desc: "Webapp to control and monitor the scientific experiments at NEMS-Lab",
-      github: "https://github.com/swapnil2me/Dashboard_PyInstr",
-      color: "#10b981",
-      type: "code"
-    },
-    {
-      title: "ChatLab",
-      desc: "A smart chatbot that simulates basic quantum circuits and solves nonlinear differential equations on the fly.",
-      github: "https://github.com/swapnil2me/chatlab",
-      demo: "https://airyzoka.github.io/chatLab/index",
-      color: "#ec4899",
-      type: "code"
-    },
-    {
-      title: "Ethereum DAPPS",
-      desc: "A simple payments app and its extension to rent out IoTs on Ganache test net.",
-      github: "https://github.com/swapnil2me/eth_payment_app",
-      demo: "https://github.com/swapnil2me/eth_rent_contract",
-      color: "#6366f1",
-      type: "code"
+  const [searchParams] = useSearchParams();
+  const categoryFilter = searchParams.get('category');
+  
+  const filteredProjects = categoryFilter 
+    ? projectsData.filter(p => p.categories && p.categories.includes(categoryFilter))
+    : projectsData;
+
+  const currentCategory = categoryFilter 
+    ? skillsData.find(s => s.id === categoryFilter)?.title 
+    : null;
+
+  const getTypeColor = (type) => {
+    switch (type?.toLowerCase()) {
+      case 'publication': return 'var(--accent-cyan)';
+      case 'code': return '#10b981'; // green accent
+      default: return 'var(--text-secondary)';
     }
-  ];
+  };
 
   return (
     <main className="page-wrapper container">
-      <h2 className="section-title">Recent Work</h2>
+      <div className="projects-header">
+        <h2 className="section-title" style={{ marginBottom: 0 }}>
+          {currentCategory ? `Projects tagged with: ${currentCategory}` : "Recent Work"}
+        </h2>
+        {categoryFilter && (
+          <Link to="/projects" className="btn-outline clear-filter-btn">
+            Show All Projects
+          </Link>
+        )}
+      </div>
       
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div className="project-card glass-card" key={index}>
             <div className="project-decoration" style={{ background: `linear-gradient(135deg, ${project.color}, transparent)` }}></div>
             
             <div className="project-content">
-              <span className="project-type" style={{ color: project.color }}>
+              <span className="project-type" style={{ color: getTypeColor(project.type) }}>
                 {project.type.toUpperCase()}
               </span>
               <h3 className="project-title">{project.title}</h3>
@@ -93,6 +71,20 @@ const Projects = () => {
       </div>
 
       <style>{`
+        .projects-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3rem;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+
+        .clear-filter-btn {
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+        }
+
         .projects-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

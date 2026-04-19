@@ -1,16 +1,43 @@
-# React + Vite
+# Swapnil More - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive personal portfolio built with React and Vite. It serves as a centralized hub for professional experience, skills, and projects.
 
-Currently, two official plugins are available:
+## Project Architecture & Configuration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application is built to be easily scalable. Data is completely decoupled from the UI components to allow quick updates.
+To update your content, you do **not** need to touch the core React code (`.jsx` components). Simply update the data configuration files.
 
-## React Compiler
+### How to Add/Edit Skills & Categories ("The things I am good at")
+All skills (which also act as the filtering categories on the Home page) are managed in `src/data/skillsData.jsx`.
+1. Open `src/data/skillsData.jsx`.
+2. Add a new object to the `skillsData` array.
+3. Ensure you add a unique `id` string (e.g., `my-new-category`). This `id` is extremely important as it links projects to this specific category.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### How to Add a New Project
+All projects are managed in `src/data/projectsData.js`.
+1. Open `src/data/projectsData.js`.
+2. Add a new object to the array.
+3. For the `categories` property, add an array of strings that perfectly match the `id` values you created in `skillsData`. You can assign multiple categories to a single project!
 
-## Expanding the ESLint configuration
+**Example:**
+```javascript
+{
+  title: "My Awesome New Project",
+  desc: "A brief description here.",
+  link: "https://link-to-paper.com", // Optional
+  github: "https://github.com/link", // Optional
+  demo: "https://demo-link.com", // Optional
+  color: "#3b82f6", // Add a custom hex color for the card's visual accent
+  type: "code", // E.g., 'code', 'publication', 'hardware'. Displayed as a subtitle.
+  categories: ["data-science", "eda-simulation"] // Matches IDs from skillsData.jsx
+}
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running Locally
+
+1. Ensure you have Node.js installed.
+2. Run `npm install`
+3. Run `npm run dev` to start the local development server with hot-reload.
+
+## Automated Deployment
+This repository is configured with a GitHub Action pipeline (`.github/workflows/deploy.yml`). Any new commits or data updates pushed to the `main` or `master` branch will automatically compile the Vite application and publish the live site seamlessly to GitHub Pages.

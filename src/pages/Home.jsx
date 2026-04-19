@@ -1,33 +1,12 @@
-import { Link } from 'react-router-dom';
-import { FaFlask, FaCogs, FaLaptopCode, FaCode } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import { skillsData } from '../data/skillsData';
 
 const Home = () => {
-  const skills = [
-    {
-      title: "Process Integration",
-      desc: "I optimize process windows for advanced semiconductor fabrication including HBM, TSV, and GAA FET technologies.",
-      icon: <FaCogs />,
-      link: "#"
-    },
-    {
-      title: "EDA & Simulation",
-      desc: "I utilize powerful EDA tools like SEMulator3D and Siemens Calibre for computational lithography, OPC, and defect modeling.",
-      icon: <FaLaptopCode />,
-      link: "#"
-    },
-    {
-      title: "Data Science",
-      desc: "I employ DoE frameworks and machine learning with JMP and Python to analyze inline metrology data and assess process variability.",
-      icon: <FaCode />,
-      link: "#"
-    },
-    {
-      title: "NEMS & Nanofabrication",
-      desc: "I have extensive experience in fabricating nanoelectromechanical systems and developing complex deep silicon etch processes.",
-      icon: <FaFlask />,
-      link: "#"
-    }
-  ];
+  const navigate = useNavigate();
+
+  const handleCardClick = (categoryId) => {
+    navigate(`/projects?category=${categoryId}`);
+  };
 
   return (
     <main className="page-wrapper container">
@@ -62,8 +41,12 @@ const Home = () => {
       <section className="skills-section">
         <h2 className="section-title">The things I am good at</h2>
         <div className="skills-grid">
-          {skills.map((skill, index) => (
-            <div className="skill-card glass-card" key={index}>
+          {skillsData.map((skill, index) => (
+            <div 
+              className="skill-card glass-card clickable" 
+              key={index}
+              onClick={() => handleCardClick(skill.id)}
+            >
               <div className="skill-icon">
                 {skill.icon}
               </div>
@@ -165,6 +148,10 @@ const Home = () => {
           flex-direction: column;
           align-items: center;
           gap: 1.5rem;
+        }
+
+        .skill-card.clickable {
+          cursor: pointer;
         }
 
         .skill-icon {
