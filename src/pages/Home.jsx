@@ -97,7 +97,7 @@ const Home = () => {
           width: 280px;
           height: 280px;
           border-radius: 50%;
-          background: url('/InRome.jpg') center / cover; /* Note: adjust image path if needed */
+          background: url('/Imec_Call_Booth.jpeg') center / cover; /* Note: adjust image path if needed */
           border: 4px solid var(--glass-border);
           position: relative;
           z-index: 2;
